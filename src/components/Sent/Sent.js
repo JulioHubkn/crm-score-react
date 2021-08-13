@@ -3,15 +3,15 @@ import css from "./Sent.module.css";
 export default function Sent() {
   const goNext = () => {};
   return (
-    <div className={css.welcomeContainer}>
-      <div className={css.imgContainer}>
+    <div className={css.welcomeContainerSent}>
+      <div className={css.imgContainerSent}>
         <img src="/logoJordan.png"></img>
       </div>
-      <div className={css.textContainer}>
-        <div className={css.titleContent}>
+      <div className={css.textContainerSent}>
+        <div className={css.titleContentSent}>
           <h2>Análise pronta!</h2>
         </div>
-        <div className={css.textContent}>
+        <div className={css.textContentSent}>
           <h5>
             Em breve o seu score será entregue no email informado, não se
             esqueça de checar a caixa de spam, caso não o encontre em sua caixa
@@ -19,9 +19,9 @@ export default function Sent() {
           </h5>
         </div>
       </div>
-      <div className={css.buttonContainer}>
+      <div className={css.buttonContainerSent}>
         <a href="https://www.hubkn.com">
-          <button className={css.next} onClick={goNext}>
+          <button className={css.nextSent} onClick={goNext}>
             conheça a hubkn
           </button>
         </a>

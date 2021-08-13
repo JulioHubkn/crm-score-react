@@ -19,8 +19,9 @@ export default function Loading({ confirmDeliver }) {
   return (
     <div className={css.box}>
       <div className={css.imgContainer}>
-        <img src="/hubkn_logo_branco.png"></img>
-        <h3>Analisando os dados do seu hubspot</h3>
+        {/* <img src="/hubkn_logo_branco.png"></img> */}
+        <h3 className={css.pulsate}>Analisando os dados do seu hubspot</h3>
+        <img src="/hubkn_simbolo.png"></img>
       </div>
       {/* <div className={css.subtitle}></div> */}
     </div>

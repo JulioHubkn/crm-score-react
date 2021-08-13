@@ -78,17 +78,13 @@ export default function Forms({ changePage }) {
               />
             </div>
             <div className={css.inputContainer}>
-              <label htmlFor="name">
-                E-mail (confirmação){" "}
-                <span
-                  className={css.alertLabel}
-                  // style={{ color: "red", marginLeft: "15%" }}
-                >
-                  {checkEmails
-                    ? "Os emails digitados devem ser iguais   "
-                    : null}
-                </span>
-              </label>
+              <label htmlFor="name">E-mail (confirmação) </label>
+              <span
+                className={css.alertLabel}
+                // style={{ color: "red", marginLeft: "15%" }}
+              >
+                {checkEmails ? "Os emails digitados devem ser iguais   " : null}
+              </span>
               <input
                 type="email"
                 name="emailConfirmation"
@@ -104,7 +100,7 @@ export default function Forms({ changePage }) {
                   // style={{ color: "red", marginLeft: "20%" }}
                 >
                   {checkApiKey
-                    ? "As chaves Hubspot devem ser do tipo xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+                    ? "Ex:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
                     : null}
                 </span>
               </label>
