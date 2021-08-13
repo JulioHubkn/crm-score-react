@@ -8,6 +8,10 @@ export default function Forms({ changePage }) {
   const goNext = () => {
     changePage("Load Report");
   };
+
+  const goBack = () => {
+    changePage("Welcome");
+  };
   const validateEmail = (event) => {
     let email1 = document.getElementById("email1").value;
     let email2 = document.getElementById("email2").value;
@@ -115,6 +119,12 @@ export default function Forms({ changePage }) {
               />
             </div>
             <div className={css.buttonContainerForms}>
+              <div className={css.Navigation}>
+                <a className={css.back} onClick={goBack}>
+                  &#9675;
+                </a>
+                <a>&#9711;</a>
+              </div>
               {formConfirmation ? (
                 <button
                   type="submit"

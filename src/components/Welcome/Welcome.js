@@ -7,7 +7,7 @@ export default function Welcome({ changePage }) {
     console.log(`Clicou para testar`);
   };
   return (
-    <div className={css.welcomeContainer}>
+    <div className={css.welcomeContainer1}>
       <div className={css.imgContainer}>
         <img src="/logoJordan.png"></img>
       </div>
@@ -25,9 +25,13 @@ export default function Welcome({ changePage }) {
           </h5>
         </div>
       </div>
-      <div className={css.buttonContainer}>
-        <button className={css.next} onClick={goNext}>
-          Testar hubspot <span style={{ fontSize: "20px" }}>&#10157;</span>
+      <div className={css.buttonContainerWelcome}>
+        <div className={css.Navigation}>
+          <a>&#9711;</a>
+          <a>&#9675;</a>
+        </div>
+        <button className={css.nextWelcome} onClick={goNext}>
+          <span style={{ fontSize: "20px" }}>Testar hubspot &#10148; </span>
         </button>
       </div>
     </div>
