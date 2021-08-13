@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import M from "materialize-css";
+import "materialize-css/dist/css/materialize.min.css";
+
+import "./App.css";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Home from "./components/Home/Home";
+import Navbar from "./Navbar";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    M.AutoInit();
+    return () => {};
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" />
+      </Switch>
+    </BrowserRouter>
   );
 }
+
+const fetchHubspotData = () => {
+  document.querySelector("#first-form");
+};
 
 export default App;

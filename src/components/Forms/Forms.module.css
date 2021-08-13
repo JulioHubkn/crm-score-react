@@ -1,0 +1,261 @@
+@font-face {
+  font-family: filson-pro;
+  src: url("../../Fonts/FilsonProBold.otf");
+  font-style: sans-serif;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1370px) {
+  .welcomeContainer {
+    background-color: white;
+    justify-content: space-around;
+    text-align: left;
+    padding: 2.75%;
+    height: 70%;
+    width: 60%;
+    min-height: fit-content;
+    min-width: fit-content;
+    max-width: 600px;
+    max-height: 100%;
+    box-shadow: 0px 5px 15px #332e30;
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    margin: auto;
+    /* margin-top: 15%; */
+  }
+
+  img {
+    width: 10%;
+  }
+
+  .imgContainer {
+    padding: 20px 30px;
+    padding-bottom: 0;
+    margin-bottom: 0px;
+    margin-top: -2%;
+  }
+
+  .nextForms {
+    /* border-top-left-radius: 50%;
+      border-top-right-radius: 30%;
+      border-bottom-left-radius: 30%;
+      border-bottom-right-radius: 50%; */
+    border-radius: 40px;
+    width: 20%;
+    height: 80px;
+    /* float: right; */
+    border-color: transparent;
+  }
+
+  .nextForms {
+    background-image: linear-gradient(
+      to right,
+      #005cff 0%,
+      #00aec9 55%,
+      #005cff 100%
+    );
+  }
+
+  .nextForms {
+    padding: 5px 25px;
+    width: 60%;
+    text-align: center;
+    /* text-transform: uppercase; */
+    font-size: 1.25em;
+    font-family: filson-pro;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    display: block;
+  }
+
+  .nextForms:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .nextForms:disabled {
+    background-image: linear-gradient(
+      to right,
+      #005cff 0%,
+      #00aec9 55%,
+      red 100%
+    );
+    /* box-shadow: 0 0 0 #eee; */
+  }
+
+  .textContainer {
+    padding: 10px;
+    margin-bottom: 10px;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .alertLabel {
+    color: red;
+    font-size: 10px;
+    margin-left: 20px;
+  }
+
+  .buttonContainerForms {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin-left: 30%;
+    width: 70%;
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .titleContentForms {
+    padding: 10px;
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 2em;
+    color: #00a3ff;
+    text-align: justify;
+    text-justify: distribute;
+  }
+
+  .textContent {
+    padding: 2.5px 10px;
+    font-size: 5px;
+    color: #8d8d8d;
+  }
+
+  label {
+    font-size: 1.75em;
+  }
+}
+
+@media only screen and (min-width: 1370px) {
+  .welcomeContainer {
+    background-color: white;
+    justify-content: space-around;
+    text-align: left;
+    padding: 2.75%;
+    height: 70%;
+    width: 60%;
+    min-height: fit-content;
+    min-width: fit-content;
+    max-width: 800px;
+    max-height: 100%;
+    box-shadow: 0px 5px 15px #332e30;
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    margin: auto;
+    /* margin-top: 15%; */
+  }
+
+  img {
+    width: 15%;
+  }
+
+  .imgContainer {
+    padding: 20px 30px;
+    padding-bottom: 0;
+    margin-bottom: 0px;
+    margin-top: -5%;
+  }
+
+  .nextForms {
+    /* border-top-left-radius: 50%;
+      border-top-right-radius: 30%;
+      border-bottom-left-radius: 30%;
+      border-bottom-right-radius: 50%; */
+    border-radius: 40px;
+    width: 20%;
+    height: 80px;
+    /* float: right; */
+    border-color: transparent;
+  }
+
+  .nextForms {
+    background-image: linear-gradient(
+      to right,
+      #005cff 0%,
+      #00aec9 55%,
+      #005cff 100%
+    );
+  }
+
+  .nextForms {
+    padding: 5px 25px;
+    width: 60%;
+    text-align: center;
+    /* text-transform: uppercase; */
+    font-size: 1.75em;
+    font-family: filson-pro;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    display: block;
+  }
+
+  .nextForms:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .alertLabel {
+    color: red;
+    font-size: 10px;
+    margin-left: 20px;
+  }
+
+  .nextForms:disabled {
+    background-image: linear-gradient(
+      to right,
+      #005cff 0%,
+      #00aec9 55%,
+      red 100%
+    );
+    /* box-shadow: 0 0 0 #eee; */
+  }
+
+  .textContainer {
+    padding: 20px;
+    margin-bottom: 20px;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .buttonContainerForms {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    margin-left: 30%;
+    width: 70%;
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .titleContentForms {
+    padding: 20px;
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 10px;
+    color: #00a3ff;
+    text-align: justify;
+    text-justify: distribute;
+  }
+
+  .textContent {
+    padding: 5px 20px;
+    font-size: 10px;
+    color: #8d8d8d;
+  }
+
+  label {
+    font-size: 2em;
+  }
+}
