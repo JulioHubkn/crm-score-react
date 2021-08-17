@@ -8,6 +8,10 @@ export default function Forms({ changePage }) {
   const goNext = () => {
     changePage("Load Report");
   };
+
+  const goBack = () => {
+    changePage("Welcome");
+  };
   const validateEmail = (event) => {
     let email1 = document.getElementById("email1").value;
     let email2 = document.getElementById("email2").value;
@@ -52,7 +56,9 @@ export default function Forms({ changePage }) {
       </div>
       <div className={css.textContainer}>
         <div className={css.titleContentForms}>
-          <h5>Okay, só preciso das seguintes informações</h5>
+          <h5 style={{ color: "#fc9c04" }}>
+            Okay, só preciso das seguintes informações
+          </h5>
         </div>
         <div className={css.textContent}>
           <form
@@ -94,7 +100,7 @@ export default function Forms({ changePage }) {
             </div>
             <div className={css.inputContainer}>
               <label htmlFor="name">
-                Chave Hubspot{" "}
+                HubSpot API Key{" "}
                 <span
                   className={css.alertLabel}
                   // style={{ color: "red", marginLeft: "20%" }}
@@ -115,6 +121,14 @@ export default function Forms({ changePage }) {
               />
             </div>
             <div className={css.buttonContainerForms}>
+              <div className={css.Navigation}>
+                <a className={css.back} onClick={goBack}>
+                  &#8610;{" "}
+                  <span style={{ fontSize: "0.5em", marginBottom: "5px" }}>
+                    Voltar
+                  </span>
+                </a>
+              </div>
               {formConfirmation ? (
                 <button
                   type="submit"
@@ -122,7 +136,7 @@ export default function Forms({ changePage }) {
                   onClick={goNext}
                 >
                   <span style={{ fontSize: "18px" }}>
-                    Testar hubspot &#10148;
+                    Testar HubSpot &#10148;
                   </span>
                 </button>
               ) : (
@@ -132,7 +146,7 @@ export default function Forms({ changePage }) {
                   disabled
                   onClick={goNext}
                 >
-                  <span style={{ fontSize: "18px" }}>Testar hubspot</span>
+                  <span style={{ fontSize: "18px" }}>Testar HubSpot</span>
                 </button>
               )}
             </div>

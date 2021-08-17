@@ -7,16 +7,18 @@ export default function Welcome({ changePage }) {
     console.log(`Clicou para testar`);
   };
   return (
-    <div className={css.welcomeContainer}>
+    <div className={css.welcomeContainer1}>
       <div className={css.imgContainer}>
         <img src="/hubkn_simbolo.png"></img>
       </div>
       <div className={css.textContainer}>
         <div className={css.titleContent}>
-          <h2 style={{ color: "#fc9c04" }}>
+          <h2>
             {/* Olá, eu sou <span style={{ color: "#fc9c04" }}>Jordan</span>, posso
             ajudá-lo a tirar o máximo de sua operação de vendas. */}
-            Usuário HubSpot, você confia nos dados do seu CRM?
+            Usuário <span style={{ color: "#fc9c04" }}>HubSpot</span>, você
+            confia no preenchimento do seu
+            <span style={{ color: "#fc9c04" }}> CRM</span>?
           </h2>
         </div>
         <div className={css.textContent}>
@@ -26,9 +28,13 @@ export default function Welcome({ changePage }) {
           </h5>
         </div>
       </div>
-      <div className={css.buttonContainer}>
-        <button className={css.next} onClick={goNext}>
-          Testar HubSpot <span style={{ fontSize: "20px" }}>&#10157;</span>
+      <div className={css.buttonContainerWelcome}>
+        <div className={css.Navigation}>
+          {/* <a>&#9711;</a>
+          <a>&#9675;</a> */}
+        </div>
+        <button className={css.nextWelcome} onClick={goNext}>
+          <span style={{ fontSize: "20px" }}>Testar HubSpot &#10148; </span>
         </button>
       </div>
     </div>

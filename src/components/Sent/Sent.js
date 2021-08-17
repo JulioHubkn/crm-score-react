@@ -5,11 +5,15 @@ export default function Sent() {
   return (
     <div className={css.welcomeContainerSent}>
       <div className={css.imgContainerSent}>
-        <img src="/logoJordan.png"></img>
+        <img className={css.jordan} src="/logoJordan.png"></img>
+        <img
+          className={css.semicircle}
+          src="/hubkn_simboloJordan_Degradê-01.png"
+        ></img>
       </div>
       <div className={css.textContainerSent}>
         <div className={css.titleContentSent}>
-          <h2>Análise pronta!</h2>
+          <h2 style={{ color: "#fc9c04" }}>Análise pronta!</h2>
         </div>
         <div className={css.textContentSent}>
           <h5>
