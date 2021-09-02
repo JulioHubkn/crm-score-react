@@ -45,9 +45,13 @@
       border-bottom-right-radius: 50%; */
     border-radius: 40px;
     width: 20%;
-    height: 80px;
+    height: 60px;
     /* float: right; */
     border-color: transparent;
+  }
+
+  .nextForms button {
+    font-size: 1.5em;
   }
 
   .nextForms {
@@ -291,4 +295,16 @@
   .Navigation {
     width: 30%;
   }
+}
+
+.check {
+  width: 100%;
+}
+
+.check input {
+  cursor: pointer;
+}
+
+.check span {
+  font-size: 20em;
 }
