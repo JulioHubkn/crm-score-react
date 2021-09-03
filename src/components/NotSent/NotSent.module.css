@@ -6,7 +6,7 @@
 }
 
 @media only screen and (max-width: 1370px) {
-  .welcomeContainer1 {
+  .welcomeContainerSent {
     background-color: white;
     justify-content: space-around;
     text-align: left;
@@ -15,7 +15,7 @@
     width: 70%;
     min-height: fit-content;
     /* min-width: fit-content; */
-    max-width: 70%;
+    max-width: 800px;
     max-height: 100%;
     box-shadow: 0px 5px 15px #332e30;
     border: 1px solid black;
@@ -23,7 +23,7 @@
     display: flex;
     flex-direction: column;
     /* flex-wrap: wrap; */
-    margin: auto;
+    margin: 10% auto;
     /* margin-top: 15%; */
   }
 
@@ -35,30 +35,43 @@
     /* height: 100%; */
     /* max-height: 15%; */
     /* width: 15%; */
-    margin: auto;
+    /* margin: auto; */
   }
 
-  .imgContainer {
-    padding: 0 7.5%;
+  .semicircle {
+    transform: rotate(135deg);
+    margin-right: -5%;
+    margin-bottom: -10%;
+  }
+
+  .jordan {
+    margin-left: 0;
+    /* margin-top: -5%; */
+  }
+
+  .imgContainerSent {
+    padding: 0 5%;
     padding-bottom: 0;
     /* margin-bottom: 0px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     max-height: 20%;
-    margin: 2.5% auto;
+    margin: 0;
     margin-bottom: 0px;
-    text-align: center;
+    text-align: left;
   }
 
-  .nextWelcome {
+  .nextSent {
     background-image: linear-gradient(
       to right,
-      /* #005cff 0%, */ #05d6a6 0%,
-      #005cff 70%,
-      #005cff 80%,
-      #05d6a6 100%
+      #005cff 0%,
+      #00aec9 50%,
+      #005cff 100%
     );
   }
 
-  .textContainer {
+  .textContainerSent {
     padding: 0;
     margin-bottom: 0;
     max-height: 50%;
@@ -69,75 +82,75 @@
     margin-top: 0;
   }
 
-  .textContainer h2 {
+  .textContainerSent h2 {
     color: #00a3ff;
-    font-size: 200%;
+    font-size: 4em;
     padding: 0;
     margin: 0 auto;
     max-height: 30%;
 
-    text-align: center;
+    text-align: justify;
     text-justify: unset;
 
     /* font-style: bold; */
     /* font-weight: 100; */
   }
 
-  .textContainer h5 {
-    color: #8d8d8d;
+  .textContainerSent h5 {
+    color: #4a4a4a;
     font-size: 1.25em;
     padding: 0;
-    margin: 0 auto;
+    margin: 5% auto;
     text-align: center;
-    font-style: small;
-    font-weight: lighter;
+    font-style: normal;
+    font-weight: 100;
   }
 
-  .nextWelcome {
-    padding: 0 3%;
-    /* padding-bottom: 10px; */
+  .nextSent {
+    padding: 4% 6%;
     text-align: center;
-    /* text-transform: uppercase; */
+    text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
-    height: 40px;
     color: white;
     box-shadow: 0 0 20px #eee;
     display: block;
     margin: 0;
   }
 
-  .nextWelcome:hover {
+  .nextSent:hover {
     background-position: right center; /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
   }
 
-  button {
+  .nextSent button {
     /* border-top-left-radius: 50%;
   border-top-right-radius: 30%;
   border-bottom-left-radius: 30%;
   border-bottom-right-radius: 50%; */
     border-radius: 40px;
     width: 100%;
-    min-width: 250px;
-    height: 10%;
+    min-width: 200px;
+    height: 15%;
     /* float: right; */
     border-color: transparent;
   }
+  a {
+    width: 100%;
+  }
 
-  .buttonContainerWelcome {
+  .buttonContainerSent {
     display: flex;
     flex-direction: row;
-    align-items: center;
     padding: 0;
-    padding-left: 10%;
+    /* padding-left: 55%; */
+    margin: 0;
     justify-content: space-between;
-    /* width: 60%; */
     max-width: 100%;
   }
 
-  .titleContent {
+  .titleContentSent {
     padding: 0 5%;
     padding-top: 0;
     margin-top: 0;
@@ -150,34 +163,35 @@
     /* text-justify: distribute; */
   }
 
-  .textContent {
+  .textContentSent {
     padding: 1.5% 5%;
     max-height: 40%;
     min-height: fit-content;
 
     /* font-size: 0.8em; */
     /* font-size: 10px; */
-    color: #8d8d8d;
+    color: #4a4a4a;
   }
 
-  .Navigation a {
-    font-size: 1.5em;
-    margin-right: 5px;
-    margin-top: 5px;
+  .return {
+    color: white;
+    background-color: #00aec9;
+    width: 40%;
+    /* margin-left: 5%; */
   }
 }
 
 @media only screen and (min-width: 1370px) {
-  .welcomeContainer1 {
+  .welcomeContainerSent {
     background-color: white;
     justify-content: space-around;
     text-align: left;
     padding: 2.75%;
     height: 70%;
-    width: 60%;
+    width: 50%;
     min-height: fit-content;
-    min-width: fit-content;
-    max-width: 800px;
+    /* min-width: fit-content; */
+    width: 800px;
     max-height: 100%;
     box-shadow: 0px 5px 15px #332e30;
     border: 1px solid black;
@@ -185,7 +199,8 @@
     display: flex;
     flex-direction: column;
     /* flex-wrap: wrap; */
-    margin: auto;
+    margin: 0 auto;
+    margin-top: 10%;
     /* margin-top: 15%; */
   }
 
@@ -194,29 +209,44 @@
     max-width: 9%; */
     /* max-height: 15%; */
     width: 15%;
-    margin: auto;
+    /* margin: auto; */
   }
 
-  .imgContainer {
+  .semicircle {
+    transform: rotate(135deg);
+    margin-right: -8%;
+    margin-bottom: -15%;
+  }
+
+  .jordan {
+    margin-left: 0;
+    margin-top: -5%;
+  }
+
+  .imgContainerSent {
     padding: 0 7.5%;
     padding-bottom: 0;
     /* margin-bottom: 0px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     max-height: 20%;
     margin: 0 auto;
-    text-align: center;
+    /* text-align: left; */
   }
 
-  .nextWelcome {
-    background-image: linear-gradient(
+  .nextSent {
+    /* background-image: linear-gradient(
       to right,
-      /* #005cff 0%, */ #05d6a6 0%,
-      #005cff 70%,
-      #005cff 80%,
-      #05d6a6 100%
-    );
+      #005cff 0%,
+      #00aec9 50%,
+      #005cff 100%
+    ); */
+
+    background-color: #005cff;
   }
 
-  .textContainer {
+  .textContainerSent {
     padding: 0 1%;
     margin: 0 auto;
     max-height: 50%;
@@ -227,23 +257,22 @@
     margin-top: 0;
   }
 
-  .textContainer h2 {
+  .textContainerSent h2 {
     color: #00a3ff;
-    font-size: 3.2em;
+    font-size: 5em;
     padding: 0;
     margin: 0 auto;
     max-height: 50%;
 
-    text-align: justify;
-    text-justify: unset;
+    text-align: center;
 
     /* font-style: bold; */
     /* font-weight: 100; */
   }
 
-  .textContainer h5 {
+  .textContainerSent h5 {
     color: #8d8d8d;
-    /* font-size: 200%; */
+    font-size: 1.5em;
     padding: 0;
     margin: 0 auto;
     text-align: center;
@@ -251,21 +280,20 @@
     font-weight: lighter;
   }
 
-  .nextWelcome {
+  .nextSent {
     padding: 0 6%;
     text-align: center;
+    text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
     color: white;
-    font-size: 1.5em;
-    height: 56px;
-    width: 60%;
     box-shadow: 0 0 20px #eee;
     display: block;
-    margin: 0;
+    width: 100%;
+    /* margin: 0; */
   }
 
-  .nextWelcome:hover {
+  .nextSent:hover {
     background-position: right center; /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
@@ -277,24 +305,30 @@
   border-bottom-left-radius: 30%;
   border-bottom-right-radius: 50%; */
     border-radius: 40px;
-    /* width: 100%; */
-    /* min-width: 200px; */
-    height: 10%;
-    /* float: right; */
+    min-width: 200px;
+    height: 100%;
+    width: 100%;
     border-color: transparent;
   }
 
-  .buttonContainerWelcome {
+  .buttonContainerSent {
     display: flex;
     flex-direction: row;
-    padding: 0;
-    padding-left: 10%;
-    padding-right: 5%;
+    padding: 0 5%;
+    /* padding-left: 50%; */
     justify-content: space-between;
-    max-width: 100%;
+    width: 100%;
+    /* max-width: 80%; */
+  }
+  a {
+    width: 60%;
+    height: 60px;
+    /* text-align: right; */
+    /* margin-right: 5%; */
+    /* padding-left: 15%; */
   }
 
-  .titleContent {
+  .titleContentSent {
     padding: 0 5%;
     padding-top: 0;
     /* margin-top: 0; */
@@ -307,7 +341,7 @@
     /* text-justify: distribute; */
   }
 
-  .textContent {
+  .textContentSent {
     padding: 1.5% 5%;
     /* max-height: 40%; */
     min-height: fit-content;
@@ -317,9 +351,15 @@
     color: #8d8d8d;
   }
 
-  .Navigation a {
-    font-size: 1.5em;
-    margin-right: 5px;
-    margin-top: 5px;
+  .return {
+    color: white;
+    background-color: #00aec9;
+
+    width: 100%;
+  }
+
+  .buttonContainerSent div {
+    height: 80px;
+    width: 40%;
   }
 }

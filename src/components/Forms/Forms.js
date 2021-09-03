@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import css from "./Forms.module.css";
 
-export default function Forms({ changePage }) {
+export default function Forms({ changePage, fetchData }) {
   const [formConfirmation, setFormConfirmation] = useState(false);
   const [checkEmails, setCheckEmails] = useState(false);
   const [checkApiKey, setCheckApiKey] = useState(false);
@@ -13,7 +13,13 @@ export default function Forms({ changePage }) {
         "Por favor, continue apenas se concordar com nossos termos de uso"
       );
     } else {
+      let email1 = document.getElementById("email1").value;
+      let name = document.getElementById("name").value;
+      let hubspotAPIInput = document.getElementById("hubspotAPI").value;
+      let companyName = document.getElementById("companyName").value;
+
       changePage("Load Report");
+      fetchData(hubspotAPIInput, email1, name, companyName);
     }
   };
 

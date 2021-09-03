@@ -3,18 +3,19 @@ import css from "./Loading.module.css";
 import moment from "moment";
 export default function Loading({ confirmDeliver }) {
   let countSeconds = 0;
-  const count = () => {
-    countSeconds++;
-    console.log(countSeconds + " vez(es)");
-    if (countSeconds === 2) {
-      change();
-    }
-  };
-  let waitForData = setInterval(count, 3000);
+  // const count = () => {
+  //   countSeconds++;
+  //   console.log(countSeconds + " vez(es)");
+  //   if (countSeconds === 2) {
+  //     change();
+  //   }
+  // };
 
-  function change() {
-    confirmDeliver();
-  }
+  // let waitForData = setInterval(count, 3000);
+
+  // function change() {
+  //   confirmDeliver();
+  // }
 
   return (
     <div className={css.box}>

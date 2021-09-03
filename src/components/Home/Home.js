@@ -4,6 +4,7 @@ import Forms from "../Forms/Forms";
 import Loading from "../Loading/Loading";
 import Rules from "../Rules/Rules";
 import Sent from "../Sent/Sent";
+import NotSent from "../NotSent/NotSent";
 import M from "materialize-css";
 import css from "./home.module.css";
 
@@ -14,10 +15,39 @@ export default function Home() {
 
   const changePage = (page) => {
     setPage(page);
+    setSendConfirmation();
   };
 
-  const sendEmailTrigger = () => {
-    setSendConfirmation({ validate: true });
+  const sendEmailTrigger = (requestOutcome) => {
+    setSendConfirmation({ validate: requestOutcome });
+  };
+
+  const fetchData = async (hubspotAPIInput, email, name, companyName) => {
+    let myRequest = {
+      hubspotAPIKey: hubspotAPIInput,
+      email: email,
+      company: companyName,
+      name: name,
+    };
+
+    let requestOutcome = await fetch(
+      "https://us-central1-sales-mentor-prod.cloudfunctions.net/crmQuality",
+      {
+        method: "POST",
+        body: JSON.stringify(myRequest),
+      }
+    ).then(function (response) {
+      if (response.ok) {
+        setSendConfirmation("ok");
+        console.log("OK!");
+      } else {
+        setSendConfirmation("Falha");
+
+        console.log("Falha");
+      }
+    });
+
+    return true;
   };
 
   // useEffect(() => {
@@ -32,13 +62,15 @@ export default function Home() {
       {page === "Welcome" ? (
         <Welcome changePage={changePage} />
       ) : page === "Forms" ? (
-        <Forms changePage={changePage} />
+        <Forms changePage={changePage} fetchData={fetchData} />
       ) : page === "Rules" ? (
         <Rules changePage={changePage} />
-      ) : !sendConfirmation ? (
-        <Loading confirmDeliver={sendEmailTrigger} />
-      ) : (
+      ) : sendConfirmation === "Falha" ? (
+        <NotSent changePage={changePage} />
+      ) : sendConfirmation === "ok" ? (
         <Sent confirmDeliver={sendEmailTrigger} />
+      ) : (
+        <Loading confirmDeliver={sendEmailTrigger} />
       )}
     </div>
   );
