@@ -18,8 +18,8 @@ export default function Sent() {
         <div className={css.textContentSent}>
           <h5>
             Em breve o seu score será entregue no email informado, não se
-            esqueça de checar a caixa de spam, caso não o encontre em sua caixa
-            de entrada!
+            esqueça de checar a caixa de spam ou na aba "Promoções", caso não o
+            encontre em sua caixa de entrada!
           </h5>
         </div>
       </div>
